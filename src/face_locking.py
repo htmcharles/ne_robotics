@@ -313,15 +313,6 @@ class FaceLockSystem:
                         actions = self.action_det.detect(best_lm, W, H)
                         for atype, desc in actions:
                             self.log_action(atype, desc)
-                            cv2.putText(
-                                vis,
-                                f"ACT: {atype}",
-                                (10, H - 40),
-                                cv2.FONT_HERSHEY_SIMPLEX,
-                                0.7,
-                                (0, 255, 255),
-                                2
-                            )
             else:
                 # Target not found this frame
                 self.lost_frames += 1

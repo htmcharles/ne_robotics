@@ -1,0 +1,38 @@
+18:04:06 | LOCK_ACQUIRED | sim=0.71
+18:04:06 | MOVE_RIGHT | nose_x=0.64
+18:04:06 | MOVE_LEFT | nose_x=0.43
+18:04:07 | MOVE_RIGHT | nose_x=0.61
+18:04:10 | LOCK_LOST | Identity verification failed
+18:04:10 | LOCK_ACQUIRED | sim=0.56
+18:04:12 | LOCK_LOST | Identity verification failed
+18:04:13 | LOCK_ACQUIRED | sim=0.53
+18:04:13 | BLINK | EAR=0.17
+18:04:14 | LOCK_LOST | Identity verification failed
+18:04:18 | LOCK_ACQUIRED | sim=0.53
+18:04:19 | LOCK_LOST | Target disappeared
+18:05:17 | LOCK_ACQUIRED | sim=0.55
+18:05:17 | MOVE_LEFT | nose_x=0.41
+18:05:18 | MOVE_LEFT | nose_x=0.40
+18:05:19 | MOVE_RIGHT | nose_x=0.61
+18:05:20 | MOVE_RIGHT | nose_x=0.64
+18:05:21 | LOCK_LOST | Target disappeared
+18:10:12 | LOCK_ACQUIRED | sim=0.60
+18:10:12 | MOVE_LEFT | nose_x=0.45
+18:10:13 | MOVE_LEFT | nose_x=0.41
+18:10:13 | MOVE_RIGHT | nose_x=0.62
+18:10:14 | MOVE_RIGHT | nose_x=0.77
+18:10:15 | MOVE_RIGHT | nose_x=0.60
+18:10:16 | MOVE_RIGHT | nose_x=0.63
+18:10:17 | MOVE_RIGHT | nose_x=0.63
+18:10:18 | MOVE_LEFT | nose_x=0.49
+18:10:19 | MOVE_LEFT | nose_x=0.16
+18:10:20 | MOVE_LEFT | nose_x=0.18
+18:10:21 | MOVE_LEFT | nose_x=0.47
+18:10:22 | MOVE_RIGHT | nose_x=0.60
+18:10:23 | MOVE_RIGHT | nose_x=0.73
+18:10:24 | MOVE_LEFT | nose_x=0.48
+18:10:25 | MOVE_LEFT | nose_x=0.18
+18:10:26 | MOVE_LEFT | nose_x=0.16
+18:10:27 | MOVE_LEFT | nose_x=0.19
+18:10:28 | MOVE_LEFT | nose_x=0.25
+18:10:29 | MOVE_LEFT | nose_x=0.31

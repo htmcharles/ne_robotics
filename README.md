@@ -24,6 +24,7 @@ The system is designed for **embedded systems applications**, demonstrating how 
 - [Project Structure](#project-structure)
 - [Quick Start](#quick-start)
 - [Usage](#usage)
+- [Documentation Files](#documentation-files)
 
 ## System Architecture
 
@@ -132,6 +133,17 @@ Face_recognition_with_Arcface/
     └── embedder_arcface.onnx
 ```
 
+## Documentation Files
+
+The main assessment/report document is:
+
+- [Distributed Vision-Control System (Face-Locked Servo).md](C:\NE\robotics\Face_recognition_with_Arcface\Distributed%20Vision-Control%20System%20(Face-Locked%20Servo).md)
+
+The reusable documentation diagram files are:
+
+- [docs/flow-diagram.md](C:\NE\robotics\Face_recognition_with_Arcface\docs\flow-diagram.md)
+- [docs/system-architecture.md](C:\NE\robotics\Face_recognition_with_Arcface\docs\system-architecture.md)
+
 ## Quick Start
 
 ### 1. Install Dependencies
@@ -147,6 +159,7 @@ This project is currently configured on this PC to use:
 - Project Python: `C:\NE\robotics\Face_recognition_with_Arcface\venv310\Scripts\python.exe`
 - Python version: `3.10.9`
 - Local PC IP: `10.206.87.243`
+- Preferred external camera index: `1`
 
 On Windows, prefer using the project virtual environment directly instead of the global `python` command, because the global machine Python may point to a different version.
 
@@ -242,7 +255,8 @@ Upload `esp8266/vision_servo/vision_servo.ino` using Arduino IDE.
 
 Servo signal pin for this setup:
 
-- `D4` on the NodeMCU / ESP8266
+- Physical board pin: `D4`
+- Arduino code pin value: `2` (`GPIO2`)
 
 ### 5. Access Dashboard
 Open: [http://157.173.101.159:9313]([http://157.173.101.159:9313/])

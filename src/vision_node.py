@@ -24,9 +24,10 @@ from src.recognize import ArcFaceEmbedderONNX, FaceDBMatcher, load_db_npz
 from src.face_locking import FaceLockSystem
 
 # Configuration
-DEFAULT_BROKER = "10.206.87.243"
+DEFAULT_BROKER = "157.173.101.159"
 PORT = 1883
 TEAM_ID = "student73"
+CAMERA_INDEX = 0
 TOPIC_MOVEMENT = f"vision/{TEAM_ID}/movement"
 TOPIC_HEARTBEAT = f"vision/{TEAM_ID}/heartbeat"
 
@@ -92,9 +93,11 @@ class VisionNode:
         self.client.publish(TOPIC_HEARTBEAT, json.dumps(payload))
 
     def run(self):
-        cap = cv2.VideoCapture(0) # Use default camera
+        cap = cv2.VideoCapture(CAMERA_INDEX)
         if not cap.isOpened():
-             cap = cv2.VideoCapture(1)
+            raise RuntimeError(
+                f"External camera on index {CAMERA_INDEX} could not be opened."
+            )
         
         print(f"Vision Node Started. Tracking target: {self.system.target_name}")
         print(f"Publishing to {TOPIC_MOVEMENT}")
@@ -155,7 +158,24 @@ class VisionNode:
                 is_locked = (status != "NO_FACE")
                 self.publish_movement(status, target=self.system.target_name, locked=is_locked, face_image=face_crop)
                 self.last_publish_time = current_time
-            
+
+            # Draw the actual published movement status on screen so the UI matches MQTT logs.
+            status_colors = {
+                "MOVE_LEFT": (0, 255, 255),
+                "MOVE_RIGHT": (0, 255, 255),
+                "CENTERED": (0, 255, 255),
+                "NO_FACE": (0, 0, 255),
+            }
+            cv2.putText(
+                vis,
+                f"ACT: {status}",
+                (10, H - 40),
+                cv2.FONT_HERSHEY_SIMPLEX,
+                0.9,
+                status_colors.get(status, (255, 255, 255)),
+                2
+            )
+
             # Heartbeat every 5s
             if time.time() - self.last_heartbeat > 5:
                 self.publish_heartbeat()

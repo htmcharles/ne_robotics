@@ -5,7 +5,7 @@ import ujson
 
 # Configuration
 # VPS IP for MQTT Broker
-MQTT_BROKER = "10.206.87.243"  # Local PC IP for testing
+MQTT_BROKER = "157.173.101.159"  # VPS broker
 CLIENT_ID = "esp8266_student73"
 TOPIC_SUB = b"vision/student73/movement"
 TOPIC_PUB = b"vision/student73/heartbeat"
