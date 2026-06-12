@@ -7,7 +7,7 @@ const path = require('path');
 // Configuration
 // On VPS, we connect to local mosquitto. On PC, we might want to connect to VPS IP?
 // For Backend (running on VPS), it should connect to localhost (its own mosquitto).
-const MQTT_BROKER = 'mqtt://10.206.87.243';
+const MQTT_BROKER = 'mqtt://157.173.101.159';
 const TEAM_ID = 'student73';
 const MQTT_TOPIC_VS = `vision/${TEAM_ID}/movement`;
 const WS_PORT = 9002;
