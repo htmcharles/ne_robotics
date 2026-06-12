@@ -1,0 +1,31 @@
+*.zip
+*.pdf
+*.onnx
+
+# Python environments and caches
+venv/
+venv310/
+.venv/
+.venv311/
+__pycache__/
+*.pyc
+.matplotlib/
+
+# Project-generated data
+db/
+enroll/
+
+# Node / frontend
+node_modules/
+
+# Local build and packaging artifacts
+wheelhouse311/
+vision_servo_clean/
+.arduino-build/
+.arduino-build-clean-2/
+.arduino-build-clean-3/
+.arduino-data/
+.arduino-temp-sketch-2/
+
+# Local notes
+dp.txt
